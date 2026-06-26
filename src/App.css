@@ -1,0 +1,264 @@
+/* ## Colors
+
+### Primary
+
+
+
+#### Dark Theme
+
+- Linear gradient (Toggle): hsl(210, 79%, 56%) to hsl(146, 68%, 55%)
+
+#### Light Theme
+
+- Gray 400 (Toggle): hsl(230, 22%, 74%)
+
+### Neutral
+
+#### Dark Theme
+
+- Gray 950 (BG): hsl(230, 17%, 14%)
+- Gray 900 (Top BG Pattern): hsl(232, 19%, 15%)
+- Navy 950 (Card BG): hsl(228, 28%, 20%)
+- Gray 400 (Text): hsl(230, 22%, 74%)
+- White (Text): hsl(0, 100%, 100%)
+
+#### Light Theme
+
+- White (BG): hsl(0, 100%, 100%)
+- Blue 50 (Top BG Pattern): hsl(225, 100%, 98%)
+- Navy 50 (Card BG): hsl(227, 47%, 96%)
+- Gray 650 (Text): hsl(228, 12%, 44%)
+- Gray 950 (Text): hsl(230, 17%, 14%) */
+
+/************** THEME *****************/
+
+.light-theme {
+  --top-bg: hsl(225, 100%, 98%);
+  --bg: hsl(0, 100%, 100%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text-main: hsl(230, 17%, 14%);
+  --text-secondary: hsl(228, 12%, 44%);
+  --overview-title: hsl(228, 12%, 44%);
+}
+
+.dark-theme {
+  --top-bg: hsl(232, 19%, 15%);
+  --bg: hsl(230, 17%, 14%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-main: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+  --overview-title: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--bg);
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  padding: 1.5rem;
+}
+
+.app::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 250px;
+  background-color: var(--top-bg);
+  z-index: -1;
+  border-radius: 0 0 20px 20px;
+}
+
+/************* HEADER *****************/
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.app-info {
+  display: grid;
+  gap: 0.2rem;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-main);
+}
+
+.total-followers {
+  font-weight: 700;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/*********** THEME SELECTOR ************/
+.theme {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-name {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  background: hsl(230, 22%, 74%);
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 22px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: hsl(0, 100%, 100%);
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + .slider::before {
+  transform: translateX(-20px);
+  background-color: hsl(230, 17%, 14%);
+}
+
+/*********** SOCIAL CARDS ***********/
+.social-card {
+  position: relative;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 10px;
+  padding: 1rem 0;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--top-border);
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.bio p {
+  font-weight: 700;
+}
+
+.social-metrics {
+  display: flex;
+  gap: 0.625rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.followers p {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  font-size: 0.8rem;
+}
+
+/*********** OVERVIEW SECTION ************/
+.overview-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+h3 {
+  color: var(--overview-title);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.page-views,
+.percentage-change {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.page-views h4 {
+  font-size: 2rem;
+}
+
+.overview-metrics {
+  display: flex;
+  align-items: center;
+}
+
+.metric-positive {
+  color: hsl(163, 72%, 41%);
+}
+
+.metric-negative {
+  color: hsl(356, 69%, 56%);
+}
+
+.overview-section {
+  background: var(--bg);
+}
+
+.overview-card {
+  background-color: var(--card-bg);
+}
+
+h1,
+h2,
+h4 {
+  color: var(--text-main);
+}
+
+.total-followers,
+.bio p,
+.followers p {
+  color: var(--text-secondary);
+}
