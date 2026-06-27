@@ -7,7 +7,7 @@ function SocialCard({ cardData, isDarkMode }) {
       }}
     >
       <div className="bio">
-        <div className="img">
+        <div className="platform-icon">
           <img src={cardData.platform} alt="user platform" />
         </div>
         <p>{cardData.username}</p>

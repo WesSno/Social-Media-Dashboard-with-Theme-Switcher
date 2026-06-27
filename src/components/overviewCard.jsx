@@ -18,7 +18,7 @@ function OverviewCard({ cardData, isDarkMode }) {
               : "overview-metrics metric-negative"
           }
         >
-          <div className="percentage-value-arrow">
+          <div className="change-arrow">
             <img
               src={
                 cardData.isPositive
