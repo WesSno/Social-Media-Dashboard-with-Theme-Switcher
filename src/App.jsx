@@ -33,9 +33,11 @@ function App() {
     <div className={isDarkMode ? "app dark-theme" : "app light-theme"}>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
-      {socialMediaData.map((card) => (
-        <SocialCard key={card.id} cardData={card} />
-      ))}
+      <div className="social-card-container">
+        {socialMediaData.map((card) => (
+          <SocialCard key={card.id} cardData={card} />
+        ))}
+      </div>
 
       <OverviewSection overviewData={overviewData} />
     </div>

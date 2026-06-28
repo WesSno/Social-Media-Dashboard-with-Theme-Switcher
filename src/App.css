@@ -151,6 +151,12 @@ input:checked + .slider::before {
 }
 
 /*********** SOCIAL CARDS ***********/
+.social-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
 .social-card {
   position: relative;
   background-color: var(--card-bg);
@@ -213,6 +219,12 @@ h2 {
 }
 
 /*********** OVERVIEW SECTION ************/
+.overview-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.625rem;
+}
+
 .overview-card {
   display: flex;
   justify-content: space-between;
@@ -240,6 +252,10 @@ h3 {
 
 .page-views h4 {
   font-size: 2rem;
+}
+
+.page-views p {
+  font-weight: 700;
 }
 
 .overview-metrics {
@@ -279,4 +295,7 @@ h4 {
 .followers p,
 .page-views p {
   color: var(--text-secondary);
+}
+
+@media only screen and (min-width: 768px) {
 }

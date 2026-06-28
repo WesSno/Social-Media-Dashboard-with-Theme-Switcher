@@ -5,9 +5,11 @@ function OverviewSection({ overviewData }) {
     <div className="overview-section">
       <h3>Overview - Today</h3>
 
-      {overviewData.map((card) => {
-        return <OverviewCard key={card.id} cardData={card} />;
-      })}
+      <div className="overview-card-container">
+        {overviewData.map((card) => {
+          return <OverviewCard key={card.id} cardData={card} />;
+        })}
+      </div>
     </div>
   );
 }
