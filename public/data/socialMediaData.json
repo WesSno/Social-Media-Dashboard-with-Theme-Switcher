@@ -7,7 +7,7 @@
     "label": "Followers",
     "todayChange": 12,
     "isPositive": true,
-    "borderColor": "hsl(208, 92%, 53%)"
+    "accent": "hsl(208, 92%, 53%)"
   },
 
   {
@@ -18,7 +18,7 @@
     "label": "Followers",
     "todayChange": 99,
     "isPositive": true,
-    "borderColor": "hsl(203, 89%, 53%)"
+    "accent": "hsl(203, 89%, 53%)"
   },
 
   {
@@ -29,7 +29,7 @@
     "label": "Followers",
     "todayChange": 1099,
     "isPositive": true,
-    "borderColor": "linear-gradient(to right,hsl(37,97%,70%),hsl(329,70%,58%))"
+    "accent": "linear-gradient(to right,hsl(37,97%,70%),hsl(329,70%,58%))"
   },
 
   {
@@ -40,6 +40,6 @@
     "label": "Subscribers",
     "todayChange": 144,
     "isPositive": false,
-    "borderColor": "hsl(348, 97%, 39%)"
+    "accent": "hsl(348, 97%, 39%)"
   }
 ]

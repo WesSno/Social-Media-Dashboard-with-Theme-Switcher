@@ -3,7 +3,7 @@ function SocialCard({ cardData, isDarkMode }) {
     <article
       className="social-card"
       style={{
-        "--top-border": cardData.borderColor,
+        "--top-border": cardData.accent,
       }}
     >
       <div className="bio">
