@@ -33,7 +33,7 @@ Users are be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/WesSno/Social-Media-Dashboard-with-Theme-Switcher)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://social-media-dashboard-kbk.netlify.app/)
 
 ## My process
 
