@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     fetch("/data/overviewData.json")
       .then((res) => res.json())
-      .then((overviewData) => setOverviewData(overviewData))
+      .then((data) => setOverviewData(data))
       .catch((error) => console.log(error));
   }, []);
 

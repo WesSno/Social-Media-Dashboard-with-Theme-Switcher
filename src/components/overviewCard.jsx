@@ -1,4 +1,4 @@
-function OverviewCard({ cardData, isDarkMode }) {
+function OverviewCard({ cardData }) {
   return (
     <article className="overview-card">
       <div className="page-views">

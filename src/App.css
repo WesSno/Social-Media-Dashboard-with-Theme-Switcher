@@ -1,3 +1,13 @@
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /************** THEME *****************/
 
 .light-theme {
@@ -22,6 +32,14 @@ body {
   background: var(--bg);
 }
 
+h1,
+h2,
+h4 {
+  color: var(--text-main);
+}
+
+/************* APP **********/
+
 .app {
   min-height: 100vh;
   position: relative;
@@ -32,7 +50,7 @@ body {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 250px;
+  height: 15.6rem;
   background-color: var(--top-bg);
   z-index: -1;
   border-radius: 0 0 20px 20px;
@@ -195,6 +213,10 @@ h2 {
 }
 
 /*********** OVERVIEW SECTION ************/
+.overview-section {
+  background: var(--bg);
+}
+
 .overview-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -250,7 +272,6 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
-  align-items: center;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -261,20 +282,6 @@ h3 {
 
 .metric-negative {
   color: hsl(356, 69%, 56%);
-}
-
-.overview-section {
-  background: var(--bg);
-}
-
-.overview-card {
-  background-color: var(--card-bg);
-}
-
-h1,
-h2,
-h4 {
-  color: var(--text-main);
 }
 
 .total-followers,

@@ -1,4 +1,4 @@
-function SocialCard({ cardData, isDarkMode }) {
+function SocialCard({ cardData }) {
   return (
     <article
       className="social-card"
